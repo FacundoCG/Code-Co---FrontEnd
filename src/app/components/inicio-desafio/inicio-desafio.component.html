@@ -1,0 +1,52 @@
+<div class="text-center text-white fw-bold mt-3 d-flex justify-content-center align-items-center">
+  <h4>¿Cómo jugar?</h4>
+  <button class="btn btn-dark btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="fa-solid fa-circle-question fa-xl"></i>
+  </button>
+</div>
+
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 90vh">
+
+  <div class="container">
+
+    <h3 class="fw-bold display-2 text-white text-center">INICIO DEL DESAFÍO</h3>
+    <span class="d-flex justify-content-center mt-3">
+      <button type="button" class="btn btn-warning btn-lg fw-bold" (click)="goToChallenge()">JUGAR</button>
+    </span>
+  </div>
+
+
+</div>
+
+<span class="fixed-bottom">
+  <button class="btn btn-dark btn-lg" type="button" onclick="window.history.go(-1);"><i
+      class="fa-solid fa-circle-arrow-left fa-2x"></i></button>
+
+</span>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <span class="container d-flex justify-content-center">
+          <h5 class="modal-title fw-bold" id="exampleModalLabel">INSTRUCCIONES</h5>
+        </span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <ol>
+          <li>Una vez que usted pulse en el botón jugar, el desafío comienza y va a recibir un puntaje por este.
+          <li>El desafío va a constar de cinco preguntas y cada una va a tener cuatro opciones. </li>
+          <li>La duración total del desafío va a ser de tres minutos. Una vez que el tiempo llegue a cero o usted
+            presione en el botón finalizar, las respuestas se enviarán automáticamente.</li>
+          <li>Si usted decide abandonar el desafío antes de que el tiempo finalice, recibirá de puntuación cero.
+          <li>El resultado de su desafío se indicará una vez que este haya sido enviado. Puede verlo en la pantalla que
+            sale cuando finaliza el desafío, o en su perfil en el historial de desafíos realizados. </li>
+          <li>El desafío lo podrá volver a repetir cuando haya pasado un mes desde que lo realizó.</li>
+
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

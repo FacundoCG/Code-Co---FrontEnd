@@ -1,0 +1,57 @@
+<div class="card m-4">
+  <div class="card-header text-warning">
+    <div class="row">
+      <div class="col-md-11 text-center">
+        <h3 class="fw-bold mt-2">{{title}}</h3>
+      </div>
+      <div class="col-md-1 pt-2">
+        <button type="button" class="btn btn-dark fw-bold" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">SALIR</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <p class="card-text text-center">(DURACIÓN DEL DESAFÍO)</p>
+    <form #f="ngForm" (ngSubmit)="f.form.valid " class="row g-3 rounded">
+      <app-question [data]="question" [index]="indexOfelement"
+        *ngFor="let question of challenge.questions;let indexOfelement=index;">
+      </app-question>
+    </form>
+
+    <div class="card-footer mt-3">
+
+      <span class="d-flex justify-content-center mt-3"><button (click)="complete()" type="submit"
+          class="btn btn-warning fw-bold text-white" [disabled]="disabledButton">FINALIZAR</button>
+      </span>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-warning">
+      <div class="modal-header bg-light fw-bold border-warning">
+        <span class="container d-flex justify-content-center">
+          <h4 class="modal-title fw-bold" id="exampleModalLabel">¿Quieres salir?</h4>
+        </span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body border-warning">
+
+        <span class="d-flex justify-content-center align-item-center">
+          <button class="btn btn-dark fw-bold mx-2" data-bs-dismiss="modal" aria-label="Close">NO</button>
+          <button class="btn btn-warning fw-bold" [routerLink]="['/']" data-bs-dismiss="modal"
+            aria-label="Close">SÍ</button>
+        </span>
+
+      </div>
+
+      <div class="modal-footer text-danger fw-bold d-flex justify-content-center">
+        Si abandona el desafío, el resultado que obtendrá será 0.
+      </div>
+
+    </div>
+  </div>
+</div>

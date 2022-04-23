@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid text-center mt-4">
+
+  <h1 class="text-light  fw-bold display-2 ">DESAFÍOS DE PYTHON</h1>
+
+</div>
+
+<div class="container-fluid centrar">
+  <div class="container m-2">
+    <h3 class="text-center fw-bold display-4 text-warning ">NIVEL JUNIOR</h3>
+
+    <div class="row">
+      <div class="col-md-6" *ngFor="let challenge of juniorChallenges">
+        <app-desafio-card [data]="challenge"></app-desafio-card>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid centrar">
+  <div class="container m-2">
+    <h3 class="text-center fw-bold display-4 text-warning ">NIVEL SEMI SENIOR</h3>
+    <div class="row">
+      <div class="col-md-6" *ngFor="let challenge of semiChallenges">
+        <app-desafio-card [data]="challenge"></app-desafio-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid centrar">
+  <div class="container m-2">
+    <h3 class="text-center fw-bold display-4 text-warning ">NIVEL SENIOR</h3>
+    <div class="row">
+      <div class="col-md-6" *ngFor="let challenge of seniorChallenges">
+        <app-desafio-card [data]="challenge"></app-desafio-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-footer class="fixed-bottom"></app-footer>

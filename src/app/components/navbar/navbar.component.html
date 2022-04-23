@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light ">
+  <div class="container-fluid">
+    <a [routerLink]="['']"><img src="../../../assets/img/isologotipo1.png" width="50px" height="50px" alt="."
+        class=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/inicio-usuario']"><B>Inicio</B></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/desafíos']"><B>Desafíos</B></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/empresas']"><B>Empresas</B></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/perfiles']"><B>Perfiles</B></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/contacto']"><b>Contacto</b></a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <form class="d-flex justify-content-end">
+      <!-- BOTON LOGIN -->
+      <div class="dropdown me-5">
+        <label class="text-primary me-2">
+        </label>
+        <button class="btn btn-dark" type="button" id="botonLogin" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" aria-expanded="false">
+          <i class="fa-solid fa-circle-user fa-xl"></i>
+        </button>
+
+      </div>
+      <!-- FIN BOTON LOGIN -->
+    </form>
+
+  </div>
+
+</nav>
+
+<div class="offcanvas offcanvas-end bg-dark" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+  aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header text-white">
+    <div class="container-fluid text-center">
+      <h3 class="offcanvas-title fw-bold text-warning" id="offcanvasWithBothOptionsLabel">{{name}}</h3>
+    </div>
+    <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas"
+      aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+    <ul class="container-fluid list-group" aria-labelledby="botonLogin">
+      <li class="container-fluid list-group-item centrar"><a [routerLink]="['/mi-perfil']"
+          class="link text-dark fw-bold" data-bs-dismiss="offcanvas">Mi perfil</a></li>
+      <li class="container-fluid list-group-item centrar"><a (click)="cerrarsesion()" class="link text-dark fw-bold"
+          data-bs-dismiss="offcanvas">Cerrar sesión</a></li>
+    </ul>
+
+  </div>
+</div>
+
+<br><br><br>

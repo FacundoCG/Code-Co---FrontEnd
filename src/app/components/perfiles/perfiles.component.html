@@ -9,11 +9,10 @@
   <div class="row m-1">
     <div class="col-md-4" *ngFor="let profile of profiles">
       <div class="card shadow bg-light mb-3 mt-4 border-warning">
-        <div class="card-header fw-bold text-center"><a [routerLink]="['/mi-perfil']"
-            class="text-warning">{{profile.applicant_profile.first_name }} {{profile.applicant_profile.last_name}}</a>
+        <div class="card-header fw-bold text-center text-warning">{{profile.applicant_profile.first_name }} {{profile.applicant_profile.last_name}}
         </div>
         <div class="card-body text-dark text-center">
-          <p class="card-text">Correo electrónico: {{profile.email}}</p>
+          <p class="card-text"><b>Correo electrónico: </b>{{profile.email}}</p>
           <p class="card-text" *ngIf="profile.applicant_profile.description">{{profile.applicant_profile.description}}
           </p>
         </div>

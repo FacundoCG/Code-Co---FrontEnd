@@ -1,27 +1,9 @@
-# Frontend
+Code&Co is a website about programming challenges which have professional possibility. The page has two types of users: programmers and companies.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+A programmer is able to do programming challenges and he/she has a historial where he/she is able to see his/her done challenges. 
 
-## Development server
+On the other hand, a company is able to create challenges about a programming language (at the moment, Python is just working) and it can manage them.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In short words, this is the function of the page. If you want to know more, you can visit the official website: 
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://code-co.herokuapp.com/
